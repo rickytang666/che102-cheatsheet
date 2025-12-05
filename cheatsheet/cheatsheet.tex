@@ -1,0 +1,304 @@
+\documentclass[10pt,landscape,letterpaper]{article}
+\usepackage{multicol}
+\usepackage{calc}
+\usepackage{ifthen}
+\usepackage[landscape,letterpaper]{geometry}
+\usepackage{amsmath,amsthm,amsfonts,amssymb}
+\usepackage{color,graphicx,overpic}
+\usepackage{hyperref}
+\usepackage[version=4]{mhchem}
+
+\pdfinfo{
+  /Title (che102 cheat sheet)
+  /Creator (TeX)
+  /Producer (pdfTeX 1.40.0)
+  /Author (Ricky Tang)
+  /Subject (Chemistry)
+  /Keywords (chemistry, che102, cheatsheet)}
+
+% Super narrow margins
+\ifthenelse{\lengthtest { \paperwidth = 11in}}
+    { \geometry{top=.3in,left=.3in,right=.3in,bottom=.3in} }
+    {\ifthenelse{ \lengthtest{ \paperwidth = 297mm}}
+        {\geometry{top=0.5cm,left=0.5cm,right=0.5cm,bottom=0.5cm} }
+        {\geometry{top=0.5cm,left=0.5cm,right=0.5cm,bottom=0.5cm} }
+    }
+
+% Turn off header and footer
+\pagestyle{empty}
+
+% Redefine section commands to use less space
+\makeatletter
+\renewcommand{\section}{\@startsection{section}{1}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%x
+                                {\normalfont\Large\bfseries\underline}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
+                                {-1explus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%
+                                {\normalfont\normalsize\bfseries}}
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {1ex plus .2ex}%
+                                {\normalfont\small\bfseries}}
+\makeatother
+
+% Define BibTeX command
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+% Don't print section numbers
+\setcounter{secnumdepth}{0}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt plus 0.5ex}
+
+% Reduce line spacing
+\linespread{0.85}
+
+%My Environments
+\newtheorem{example}[section]{Example}
+% -----------------------------------------------------------------------
+
+\begin{document}
+\raggedright
+\footnotesize
+\begin{multicols}{4}
+
+% multicol parameters
+% These lengths are set only within the two main columns
+%\setlength{\columnseprule}{0.25pt}
+\setlength{\premulticols}{1pt}
+\setlength{\postmulticols}{1pt}
+\setlength{\multicolsep}{1pt}
+\setlength{\columnsep}{2pt}
+
+\section{matter classification}
+
+\textbf{all matter}
+\begin{itemize}
+\item physical separation? \textbf{YES} $\rightarrow$ \textbf{mixture}
+  \begin{itemize}
+  \item uniform? \textbf{YES} $\rightarrow$ homogeneous
+  \item uniform? \textbf{NO} $\rightarrow$ heterogeneous
+  \end{itemize}
+\item physical separation? \textbf{NO} $\rightarrow$ \textbf{substance}
+  \begin{itemize}
+  \item chemical decompose? \textbf{YES} $\rightarrow$ compound
+  \item chemical decompose? \textbf{NO} $\rightarrow$ element
+  \end{itemize}
+\end{itemize}
+
+\section{stoichiometry strategies}
+
+\subsection{combustion analysis key}
+\begin{itemize}
+\item all C $\rightarrow$ \ce{CO2}, all H $\rightarrow$ \ce{H2O}
+\item O by difference: $m_O = m_{\text{sample}} - m_C - m_H$
+\item \textbf{trap:} find $n_{\ce{C}}$ not $n_{\ce{C2}}$
+\end{itemize}
+
+\subsection{simultaneous reactions}
+\textbf{setup:} let $x$ = moles in main. if total moles $n$, then $(n-x)$ = moles in side rxn
+
+\begin{enumerate}
+\item total reactant: $n$ = (calculate from given mass)
+\item products equation: mass of products from $x$ and $(n-x)$
+\item solve for $x$
+\end{enumerate}
+
+\subsection{LR with yield}
+\begin{enumerate}
+\item work \textbf{backwards} from desired product
+\item adjust for yield: $n_{\text{needed}} = n_{\text{want}} / \text{yield}$
+\item don't multiply limiting reagent by $(1 + \text{excess}\%)$. sometimes this is a trap info!
+\end{enumerate}
+
+\subsection{finding empirical formula}
+\begin{enumerate}
+\item find the moles of each element (\textbf{trap}: find $n_{\ce{X}}$ not $m_{\ce{X2}}$)
+\item find the simplest whole number ratio
+\end{enumerate}
+
+\subsection{sequential reactions}
+\begin{enumerate}
+\item find LR in \textbf{first} reaction
+\item product from step 1 becomes reactant in step 2
+\item check if new reagent limits in step 2
+\end{enumerate}
+
+\section{KMT postulates}
+\begin{enumerate}
+\item gas = very large number of molecules in ceaseless random straight-line motion
+\item molecules separated by large distance relative to size
+\item perfectly elastic collisions (no energy loss)
+\item no intermolecular forces between molecules
+\end{enumerate}
+
+\textbf{temperature measures average translational KE}
+
+\section{gas law strategies}
+
+\subsection{chamber mixing}
+\textbf{before:} $P_1V_1$ and $P_2V_2$ separate \\
+\textbf{after:} 
+$$n_{\text{total}} = \frac{P_1V_1}{RT} + \frac{P_2V_2}{RT} = \frac{P_fV_f}{RT}$$
+
+\subsection{combustion with T change}
+\begin{enumerate}
+\item find initial moles: $n_i = \frac{P_iV}{RT_i}$
+\item calculate moles after reaction (balance equation!)
+\item account for excess reagent remaining
+\item $P_f = P_i \cdot \frac{n_f}{n_i} \cdot \frac{T_f}{T_i}$ (constant $V$)
+\end{enumerate}
+
+\textbf{key:} excess \ce{O2} leftover contributes to final pressure
+
+\subsection{piston problems}
+\begin{itemize}
+\item piston constrols the \textbf{pressure}
+\item free moving piston $\rightarrow$ constant P
+\end{itemize}
+
+\subsection{determine ideal gas behavior}
+\begin{itemize}
+\item calculate P using $PV=nRT$
+\item compare to actual P
+\item if actual P $<$ ideal P, then \textbf{attractive forces} dominate
+\item if actual P $>$ ideal P, then \textbf{repulsive forces} dominate
+\item if equal, then ideal behavior
+\end{itemize}
+
+\subsection{decomposition in fixed volume}
+\begin{enumerate}
+\item moles of solid reactant
+\item count \textbf{gas} products only (exclude condensed liquids/solids)
+\item $P = \frac{nRT}{V}$
+\end{enumerate}
+
+\subsection{percent yield from pressure drop}
+\textbf{trick:} let $x$ = extent of reaction (mol reacted)
+\begin{enumerate}
+\item use the information in initial and final to solve for $x$
+\item find out $x_{\text{max}}$
+\item yield = $\frac{x}{x_{\text{max}}}\times 100\%$
+\end{enumerate}
+
+\section{tricky concepts}
+
+\subsection{van der waals adjustments}
+\begin{itemize}
+\item high $a$ = strong intermolecular forces
+\item high $b$ = large molecular volume
+\item deviations largest at high P, low T
+\end{itemize}
+
+\subsection{real vs ideal gas}
+\begin{itemize}
+\item real $\rightarrow$ ideal as \textbf{density decreases}
+\item high P, low T = more real (molecules close, interactions matter)
+\item low P, high T = more ideal (molecules far, move fast)
+\item ideal gas assumes \textbf{no intermolecular forces} and \textbf{no molecular volume}
+\end{itemize}
+
+\subsection{molecular speed distributions}
+\begin{itemize}
+\item never say ``every molecule of A is faster than B''
+\item $u \propto \sqrt{T/M}$: lighter/hotter $\rightarrow$ faster average and broader range
+\item $u_{\text{rms}} > u_{\text{avg}} > u_{\text{mp}}$ always
+\item \textbf{width increases} with temperature (broader range)
+\item same peak position: higher $M$ needs higher $T$
+\end{itemize}
+
+\subsection{liquid vs gas pressure}
+\begin{itemize}
+\item \textbf{gas:} pressure from molecular collisions with walls
+\item \textbf{liquid:} pressure from gravitational weight ($P = \rho gh$)
+\end{itemize}
+
+\subsection{partial pressure}
+$$P_i = \chi_i P_{\text{total}} \quad \text{where} \quad \chi_i = \frac{n_i}{n_{\text{total}}}$$
+
+\textbf{ideal gas:} mole fraction = volume fraction = pressure fraction
+
+\subsection{intermolecular forces}
+\begin{itemize}
+\item LDF: ALL molecules, \textbf{instantaneous induced dipoles}, increases with molar mass
+\item dipole-dipole: polar molecules only, \textbf{permanent dipoles}
+\item hydrogen bonding: H with FON
+\item covalent bonding $>>$ H.B. $>$ dipole-dipole $>$ LDF
+\end{itemize}
+
+\subsection{polarizability}
+= tendency of electron cloud to distort
+\begin{itemize}
+\item larger molecules $\rightarrow$ more polarizable
+\item more electrons $\rightarrow$ more polarizable
+\item electrons farther from nucleus $\rightarrow$ more polarizable
+\item \textbf{result:} stronger LDF forces
+\end{itemize}
+
+\subsection{repulsive forces}
+\begin{itemize}
+\item arise from electron orbital overlap
+\item very strong at short distances
+\item prevent molecules from collapsing into each other
+\end{itemize}
+
+\section{useful formulas}
+
+\subsection{solution concentration conversions}
+\begin{itemize}
+\item \% (w/w): g solute per 100 g solution
+\item \% (v/v): mL solute per 100 mL solution  
+\item \% (w/v): g solute per 100 mL solution
+\item ppm: g solute per $10^6$ g solution
+\item ppb: g solute per $10^9$ g solution
+\end{itemize}
+
+\subsection{\% excess}
+$$\%\ \text{excess} = \frac{n_{\text{actual}} - n_{\text{stoich}}}{n_{\text{stoich}}} \times 100\%$$
+
+\subsection{basic gas laws}
+\textbf{boyle's law:} $P_1V_1 = P_2V_2$ (constant $n$, $T$) \\
+\textbf{charles's law:} $\frac{V_1}{T_1} = \frac{V_2}{T_2}$ (constant $n$, $P$) \\
+\textbf{gay-lussac's law:} $\frac{P_1}{T_1} = \frac{P_2}{T_2}$ (constant $n$, $V$) \\
+\textbf{avogadro's law:} $\frac{V_1}{n_1} = \frac{V_2}{n_2}$ (constant $P$, $T$)
+
+\subsection{conversion in $\Delta$T}
+$$\frac{1\text{ K}}{1.8^\circ\text{R}} \qquad \frac{1\text{ K}}{1.8^\circ\text{F}}$$
+$^\circ$C is the same as K here
+
+\subsection{dilution}
+$$M_1V_1 = M_2V_2$$
+
+\subsection{empirical $\rightarrow$ molecular}
+$$n = \frac{M_{\text{actual}}}{M_{\text{empirical}}}$$
+then multiply subscripts by $n$
+
+\subsection{average molar mass}
+$$\bar{M}=\sum_{i}x_{i}M_{i}$$
+given mole fractions
+
+\subsection{gas density}
+$$\rho = \frac{PM}{RT}$$
+where $M$ is molar mass
+
+\subsection{mercury pressure}
+\begin{itemize}
+    \item $$P_{\text{gas}}=P_{\text{bar}}\pm P_{\ce{Hg}}$$ observe the diagram!
+    \item $$\Delta P_{\ce{mmHg}}=\Delta h_{\ce{Hg}}$$ watch the units
+    \item just compare the mercury level, no more BS
+\end{itemize}
+
+\section{common traps}
+
+\begin{itemize}
+\item gas products only for $PV=nRT$ (exclude liquids/solids)
+\item units: \ce{K} not $^\circ$\ce{C}, \ce{L} not \ce{mL}, atm for $R=0.082057$
+\item sig figs rules: $+-$ least decimal places, $\times\div$ least sig figs
+\item NEVER combine simultaneous rxns into a single equation
+\end{itemize}
+
+\end{multicols}
+\end{document}
