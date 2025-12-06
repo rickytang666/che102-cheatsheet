@@ -30,17 +30,17 @@
 % Redefine section commands to use less space
 \makeatletter
 \renewcommand{\section}{\@startsection{section}{1}{0mm}%
-                                {-1ex plus -.5ex minus -.2ex}%
-                                {0.5ex plus .2ex}%x
+                                {-1.5ex plus -.5ex minus -.2ex}%
+                                {1.5ex plus .3ex}%
                                 {\normalfont\Large\bfseries\underline}}
 \renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
-                                {-1explus -.5ex minus -.2ex}%
-                                {0.5ex plus .2ex}%
-                                {\normalfont\normalsize\bfseries}}
+                                {-1.2ex plus -.5ex minus -.2ex}%
+                                {1.2ex plus .3ex}%
+                                {\normalfont\large\bfseries}}
 \renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0mm}%
-                                {-1ex plus -.5ex minus -.2ex}%
+                                {-1ex plus -.4ex minus -.15ex}%
                                 {1ex plus .2ex}%
-                                {\normalfont\small\bfseries}}
+                                {\normalfont\normalsize\bfseries}}
 \makeatother
 
 % Define BibTeX command
@@ -51,7 +51,8 @@
 \setcounter{secnumdepth}{0}
 
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{0pt plus 0.5ex}
+\setlength{\parskip}{1.5pt plus 0.5ex}
+\makeatother
 
 % Reduce line spacing
 \linespread{0.85}
@@ -246,10 +247,6 @@
 
   \textbf{triple point:} solid, liquid, gas coexist
 
-  \textbf{\ce{CO2}:} triple point 5.1 atm, -56.7$^\circ$C; critical point 72.9 atm, 31$^\circ$C
-
-  \textbf{\ce{H2O}:} polymorphism (ice I, II, III, V, VI, VII); solid-liquid boundary has negative slope (ice less dense than water); triple point 0.006 atm, 0.01$^\circ$C
-
   \subsection{henry's law \& raoult's law}
 
   \textbf{solution:} homogeneous mixture. solvent: largest amount. solute: smaller amount
@@ -291,9 +288,9 @@
 
   $$\Delta T_{\text{bp}} = i K_b m \quad \Delta T_{\text{fp}} = -i K_f m$$
 
-  water: $K_b = 0.512$, $K_f = 1.86$ K$\cdot$kg/mol. $K_b$, $K_f$ depend only on solvent, $m$ = molality
-
   \textbf{van't hoff factor $i$:} particles per formula unit. min: $i = 1$; max: number of ions (\ce{NaCl} $\rightarrow$ 2, \ce{Pb(NO3)2} $\rightarrow$ 3). $i \rightarrow$ max as dilutes
+
+  \columnbreak
 
   \section{chemical equilibrium}
 
