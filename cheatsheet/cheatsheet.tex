@@ -78,105 +78,95 @@
 
   \subsection{collision theory}
 
-  \textbf{conditions for reaction:}
-  \begin{itemize}
-    \item molecules must \textbf{collide}
-    \item molecules must collide with \textbf{sufficient energy} (activation energy $E_a$)
-    \item molecules must collide in \textbf{correct orientation}
-  \end{itemize}
-
-  \textbf{activation energy:} reactant molecules must achieve $E_a$ before reaction can occur
+  \textbf{conditions for rxn}: collide + sufficient $E_a$ + correct orientation
 
   \textbf{catalyst:}
   \begin{itemize}
-    \item increases rate by providing \textbf{lower activation energy path}
-    \item participates but \textbf{not altered} by reaction
-    \item does \textbf{not appear} in overall reaction
-    \item avoids high temperature needed for high $E_a$ reactions
+    \item increases rate via \textbf{lower $E_a$ path}
+    \item participates but \textbf{not altered} by rxn
+    \item does \textbf{not appear} in overall rxn
+    \item does \textbf{NOT} change equilibrium
   \end{itemize}
 
-  \textbf{factors affecting rate:}
+  \textbf{factors affecting rxn rate:}
   \begin{itemize}
     \item concentration of reactants
     \item temperature
-    \item presence of catalysts
+    \item presence of \textbf{catalysts}
     \item physical nature of reactants
   \end{itemize}
 
-  \subsection{measuring reaction rates}
+  \textbf{$E_p$ diagrams}: enthalpy of reactants and products are \textbf{FIXED} regardless of catalyst presence.
 
-  \textbf{rate of reaction} $\dot{R}$: units $M/s$ ($\frac{mol}{L \cdot s}$)
+  \subsection{reaction rates}
 
-  for $aA+bB\rightarrow cC+dD$:
-  $$\dot{R}=-\frac{1}{a}\frac{d[A]}{dt}=-\frac{1}{b}\frac{d[B]}{dt}=\frac{1}{c}\frac{d[C]}{dt}=\frac{1}{d}\frac{d[D]}{dt}$$
+  must be determined \textbf{experimentally}
 
-  \textbf{instantaneous rate:} $\frac{d[A]}{dt}$ = slope of tangent on $[A]$ vs. time plot
+  rxn rate can get the rate of change of single species using \textbf{mole ratio}
 
-  rates must be determined \textbf{experimentally}
+  $\displaystyle \dot{R}=-\frac{\dot{R_{A}}}{a}\implies \dot{R}_{A}=-a\times \dot{R}$
 
-  \subsection{differential rate laws}
+  unit: $M/s$ ($\frac{mol}{L \cdot s}$)
+
+  \textbf{positive 4 products, negative 4 reactants}
+
+  \subsection{rate laws}
+
+  relates rate to \textbf{concentration} of reactants
+
+  \subsubsection{differential}
 
   for $aA+bB \rightarrow \text{products}$:
-  $$\dot{R}=-\frac{1}{a}\frac{d[A]}{dt}=-\frac{1}{b}\frac{d[B]}{dt}=k[A]^{m}[B]^{n}$$
+  $\dot{R}=-\frac{1}{a}\frac{d[A]}{dt}=-\frac{1}{b}\frac{d[B]}{dt}=k[A]^{m}[B]^{n}$
 
   \begin{itemize}
-    \item $m$: order w.r.t. A
-    \item $n$: order w.r.t. B
+    \item $m$: order w.r.t. A  ;  $n$: order w.r.t. B
     \item $m+n$: overall order
-    \item $k$: rate constant (function of temperature)
+    \item $k$: rate constant (only changes with \textbf{T})
   \end{itemize}
 
-  \textbf{note:} exponents ($m$, $n$) $\neq$ stoichiometric coefficients ($a$, $b$)
+  \textbf{note:} exponents $\neq$ coefficients
 
-  \textbf{method of initial rates:} determines instantaneous rate at beginning before concentrations change significantly
-
-  \subsection{integrated rate laws}
+  \subsubsection{integrated \& half-life}
 
   for $aA \rightarrow \text{products}$:
 
   \textbf{zero-order:}
   \begin{itemize}
     \item $[A]=-akt+[A]_{0}$
-    \item plot: $[A]$ vs. time, slope = $-ak$
-    \item units of $k$: $M/s$
+    \item unit of $k$: $M/s$
     \item $t_{1/2}=\frac{[A]_{0}}{2ak}$
   \end{itemize}
 
   \textbf{first-order:}
   \begin{itemize}
     \item $\ln[A]=-akt+\ln[A]_{0}$
-    \item plot: $\ln[A]$ vs. time, slope = $-ak$
-    \item units of $k$: $1/s$
+    \item unit of $k$: $1/s$
     \item $t_{1/2}=\frac{\ln~2}{ak}$
   \end{itemize}
 
   \textbf{second-order:}
   \begin{itemize}
     \item $\frac{1}{[A]}=akt+\frac{1}{[A]_{0}}$
-    \item plot: $\frac{1}{[A]}$ vs. time, slope = $ak$
-    \item units of $k$: $1/(M\cdot s)$
+    \item unit of $k$: $1/(M\cdot s)$
     \item $t_{1/2}=\frac{1}{ak[A]_{0}}$
+  \end{itemize}
+
+  \textbf{n-order ($n \neq 1$):}
+  \begin{itemize}
+    \item $\frac{1}{[A]^{n-1}} = (n-1)akt + \frac{1}{[A]_0^{n-1}}$
+    \item unit of $k$: $\frac{1}{\text{M}^{n-1} \cdot \text{s}}$
+    \item $t_{1/2}=\frac{2^{n-1} - 1}{ak(n-1)[A]_0^{n-1}}$
   \end{itemize}
 
   \subsection{arrhenius equation}
 
-  $$k=A \exp\left(-\frac{E_{a}}{RT}\right)$$
-
-  where:
-  \begin{itemize}
-    \item $A$: pre-exponential factor
-    \item $E_{a}$: activation energy (J/mol)
-    \item $R$: gas constant ($8.314$ J/(mol $\cdot$ K))
-    \item $T$: temperature (K)
-  \end{itemize}
-
-  \textbf{linear form:}
-  $$\ln k=-\frac{E_{a}}{R}\left(\frac{1}{T}\right)+\ln A$$
-
-  plot $\ln k$ vs. $\frac{1}{T}$: slope = $-\frac{E_{a}}{R}$
-
   \textbf{two-point form:}
   $$\ln\frac{k_{2}}{k_{1}}=-\frac{E_{a}}{R}\left(\frac{1}{T_{2}}-\frac{1}{T_{1}}\right)$$
+
+  \begin{itemize}
+    \item $R$ is ($8.314$ J/(mol $\cdot$ K))
+  \end{itemize}
 
   \vfill\null
   \columnbreak
