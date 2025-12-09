@@ -15,7 +15,7 @@
   /Producer (pdfTeX 1.40.0)
   /Author (Ricky Tang)
   /Subject (Chemistry)
-  /Keywords (chemistry, che102, cheatsheet)}
+}
 
 % Super narrow margins
 \ifthenelse{\lengthtest { \paperwidth = 11in}}
@@ -375,7 +375,7 @@
     \item exothermic ($\Delta H < 0$): $T \uparrow$, K decreases, shifts to reactants, and vice versa;
   \end{itemize}
 
-  K changes with temperature $\rightarrow$ \textbf{van't hoff equation} (see formula sheet)
+  determine K at a certain temperature (two point form) $\rightarrow$ \textbf{van't hoff equation} (see formula sheet)
 
   \begin{framed}
     adding solids, liquids or inert gases does NOT affect equilibrium, \textbf{unless it causes a change of concentration, P, T or V}
@@ -387,92 +387,96 @@
 
   \vfill\null
   \columnbreak
-
+  
   \section{electrochemistry}
 
   \subsection{oxidation states \& redox reactions}
 
-  \textbf{oxidation state (OS):} charge atom would have if all bonds were ionic. not measurable, conceptual tool
-
   \textbf{rules for assigning OS:}
   \begin{itemize}
-    \item free element: OS = 0
-    \item monatomic ion: OS = charge
+    \item free element: OS = 0 (e.g. \ce{H2}, \ce{O2})
+    \item monatomic ion: OS = charge (e.g. \ce{Na+})
     \item sum of OS in neutral species = 0
-    \item sum of OS in ion = charge
-    \item H, group 1: +1; group 2: +2; halogens: -1; group 16: -2; group 15: -3
+    \item sum of OS in polyatomic ion = charge
+    \item H is generally +1, O is generally -2
+    \item others \textit{USUALLY} just go check group number
   \end{itemize}
 
   \textbf{exceptions:} H is -1 in hydrides (e.g., \ce{LiH}); O is -1 in peroxides (e.g., \ce{H2O2})
 
   \textbf{redox reactions:}
   \begin{itemize}
-    \item reduction: OS decreases, gains electrons. oxidizing agent causes oxidation
-    \item oxidation: OS increases, loses electrons. reducing agent causes reduction
+    \item reduction: OS decreases, gains electrons
+    \item oxidation: OS increases, loses electrons
+    \item reducing agent: stuff that gets oxidized
+    \item oxidizing agent: stuff that gets reduced
   \end{itemize}
 
-  \textbf{balancing redox:}
+  \textbf{notes:} to become redox rxn, there needs to be a reduction and an oxidation (OS changes)
+
+  \textbf{balancing redox rxns:}
   \begin{enumerate}
-    \item write separate half-reactions
-    \item balance atoms except H, O
+    \item write separate half-reactions for oxidation and reduction
+    \item balance all atoms except H, O
     \item balance O with \ce{H2O}
     \item balance H with \ce{H+}
     \item balance charges with $e^-$
-    \item add half-reactions to cancel $e^-$
-    \item for basic: add \ce{OH-} equal to \ce{H+} to each side, simplify
+    \item multiply \& add half-rxns to cancel $e^-$
+    \item for basic: add \ce{OH-} equal to \ce{H+} to each side, simplify (combine \ce{H+} and \ce{OH-} to form \ce{H2O})
   \end{enumerate}
 
   \subsection{galvanic cell \& faraday's law}
 
-  \textbf{galvanic cell:} derives electrical energy from spontaneous redox reactions
+  \textbf{galvanic cell:} spontaneous redox rxns $\rightarrow$ electrical energy
 
   notation: $\text{Zn}(s)|\text{Zn}^{2+}(aq)||\text{Cu}^{2+}(aq)|\text{Cu}(s)$
 
-  \textbf{anode (oxidation):} lower potential, electrons flow from anode. \textbf{cathode (reduction):} higher potential, electrons flow to cathode
+  \textbf{anode (oxidation):} lower potential, electrons flow from anode. 
+
+  \textbf{cathode (reduction):} higher potential, electrons flow to cathode
 
   \textbf{current \& faraday's law:}
-  $$I = \frac{Q}{t} \quad \text{units: A} = \text{C/s}$$
-
-  $$Q = nF \quad n = \frac{Q}{F} = \frac{It}{F}$$
+  $$n = \frac{Q}{F} = \frac{It}{F}$$
 
   where $F = 96,485$ C/mol (charge of 1 mole of electrons), $n$ = moles of electrons
 
-  \textbf{applications:} from moles of electrons, determine moles of substance produced/consumed at electrode
-
   \textbf{current efficiency:}
-  $$\eta = \frac{\text{charge used}}{\text{charge supplied}} \times 100\% = \frac{\text{actual mass}}{\text{theoretical mass}} \times 100\%$$
+  $\displaystyle \eta = \frac{\text{charge used}}{\text{charge supplied}} \times 100\% = \frac{\text{actual mass}}{\text{theoretical mass}} \times 100\%$
 
-  \subsection{standard cell potential \& nernst equation}
+  \subsection{standard cell potential}
 
-  \textbf{cell potential $E_{\text{cell}}$:} electrical potential difference (voltage) between electrodes in V (J/C)
+  \textbf{standard conditions:} 1.0 M for dissolved species, 1 bar for gases, 25$^\circ$C
 
-  \textbf{standard state:} 1.0 M for dissolved species, 1 bar for gases, 25$^\circ$C
-
-  $$E^\circ_{\text{cell}} = E^\circ_{\text{cathode}} - E^\circ_{\text{anode}}$$
-
-  standard: $2\text{H}^+(aq) + 2e^- \to \text{H}_2(g)$ with $E^\circ = 0$ V
+  $$E^\circ_{\text{cell}} = E^\circ_{\text{cathode}} - E^\circ_{\text{anode}}> 0$$
 
   \textbf{spontaneous direction:} electrons travel from low to high potential. higher $E^\circ$ gets reduced (cathode). $E^\circ_{\text{cell}} > 0$ for spontaneous
 
-  \textbf{nernst equation:}
-  $$E_{\text{cell}} = E^\circ_{\text{cell}} - \frac{RT}{nF}\ln Q$$
+  \textbf{non-standard conditions $\rightarrow$ nernst equation} (see formula sheet)
 
-  where $R = 8.314$ J/(mol$\cdot$K), $T$ = temperature (K), $F = 96,485$ C/mol, $Q$ = reaction quotient (aq: M, gas: bar), $n$ = electrons transferred
+  \textbf{nernst @ 25$^\circ$C:}
+  $\displaystyle E_{\text{cell}} = E^\circ_{\text{cell}} - \frac{0.0592}{n}\log Q$
 
-  \textbf{at 25$^\circ$C:}
-  $$E_{\text{cell}} = E^\circ_{\text{cell}} - \frac{0.0592}{n}\log Q$$
+  \textbf{concentration cell:} same material at anode and cathode. \textbf{higher concentration} acts as \textbf{cathode}, $E_{\text{cell}} = 0$
 
-  \textbf{concentration cell:} same material at anode and cathode. higher concentration acts as cathode
+  \subsubsection{general 3 first steps for galvanic cell problems}
 
-  \subsection{nernst at equilibrium \& electrolytic cells}
+  \begin{enumerate}
+    \item identify oxidation and reduction half-reactions using the reduction potentials
+    \item add them up (with same \# of \ce{e-}) to get overall reaction
+    \item calculate $E_{\text{cell}}$
+  \end{enumerate}
 
-  \textbf{at equilibrium:} $E_{\text{cell}} = 0$, $Q = K$
+  \subsubsection{nernst at equilibrium}
 
-  $$0 = E^\circ_{\text{cell}} - \frac{RT}{nF}\ln K$$
+  battery dies when:
 
-  $$K = \exp\left(\frac{E^\circ_{\text{cell}}nF}{RT}\right)$$
+  \begin{itemize}
+    \item equilibrium is reached ($E_{\text{cell}} = 0$, $Q = K$)
+    $\displaystyle 0 = E^\circ_{\text{cell}} - \frac{RT}{nF}\ln K\implies\boxed{\displaystyle K = \exp\left(\frac{E^\circ_{\text{cell}}nF}{RT}\right)}$
+    \item the LR runs out (not in equilibrium)
+  \end{itemize}
 
-  use to determine equilibrium constants with galvanic cells
+  \subsection{electrochemical cells}
 
   \textbf{galvanic vs. electrolytic:}
   \begin{itemize}
@@ -482,8 +486,16 @@
 
   \textbf{electrochemical cells:}
   \begin{itemize}
-    \item anode: always oxidation. galvanic: $(-)$; electrolytic: $(+)$
-    \item cathode: always reduction. galvanic: $(+)$; electrolytic: $(-)$
+    \item anode: always oxidation.
+      \begin{itemize}
+        \item galvanic (negative): \ce{e-} are freed by the oxidation half-reaction
+        \item electrolytic (positive): \ce{e-} are withdrawn from electrode
+      \end{itemize}
+    \item cathode: always reduction.
+      \begin{itemize}
+        \item galvanic (positive): \ce{e-} are removed by the reduction half-reaction
+        \item electrolytic (negative): \ce{e-} are forced onto electrode
+      \end{itemize}
   \end{itemize}
 
 \end{multicols}
