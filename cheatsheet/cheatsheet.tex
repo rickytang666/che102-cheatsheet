@@ -8,6 +8,7 @@
 \usepackage{hyperref}
 \usepackage[version=4]{mhchem}
 \usepackage{framed}
+\usepackage{ulem}
 
 \pdfinfo{
   /Title (che102 cheat sheet)
@@ -81,7 +82,7 @@
 
   \subsection{fundamentals}
 
-  \textbf{$\Delta$T conversion: } $\displaystyle \frac{1K}{1.8F}$ and $\displaystyle \frac{1^\circ C}{1^\circ F}$ 
+  \textbf{$\Delta$T conversion factor: } $\displaystyle \frac{1K}{1.8F}$ \& $\displaystyle \frac{1^\circ C}{1^\circ F}$ 
 
   \textbf{molality: } $\displaystyle m = \frac{\text{mol solute}}{\text{kg solvent}}$
 
@@ -106,6 +107,15 @@
      \item \textbf{LDF:} all molecules. $\uparrow$ strength with size/mass (polarizability)
      \item \textbf{H-bond:} H bonded to N, O, F
   \end{itemize}
+
+  \subsection{limiting reactant (LR)}
+
+  \begin{enumerate}
+    \item balance rxn
+    \item calculate $n$ for all reactants
+    \item divide them by coefficients and find min
+  \end{enumerate}
+
   \section{rates of reaction}
 
   \subsection{collision theory}
@@ -193,6 +203,8 @@
 
   \subsection{arrhenius equation}
 
+  (see formula sheet)
+
   preferrably use two-point form
   
   use $R = 8.314$ J/(mol $\cdot$ K)
@@ -206,7 +218,7 @@
 
   \textbf{defn:} rate (forward) = rate (reverse)
   
-  e.g. vapour liquid equilibrium $\implies$ $\text{rate}_{\text{vap}} = \text{rate}_{\text{cond}}$
+  e.g. vapour-liquid equilibrium $\implies$ $\text{rate}_{\text{vap}} = \text{rate}_{\text{cond}}$
 
   \textbf{note:} phase $\neq$ state of matter
 
@@ -223,7 +235,7 @@
   
   weak IMF $\rightarrow$ lower $T_{\text{bp}}$ $\rightarrow$ higher vapour pressure (more volatile); and \textbf{vice versa}
 
-  $$P_{\text{vap}} = f(T, \text{type of liquid})$$
+  $$\boxed{P_{\text{vap}} = f(T, \text{type of liquid})}$$
 
   \textbf{evaporation vs. boiling:}
   \begin{itemize}
@@ -237,7 +249,7 @@
 
   \subsubsection{clausius-clapeyron equation}
 
-  (see formula sheet)
+  (see formula sheet, use $R=8.314$ J/(mol $\cdot$ K))
 
   relates vapour pressure to \textbf{temperature}
 
@@ -315,7 +327,7 @@
 
   $i_{\text{max}} = \text{\# of ions}$ (complete dissociation), e.g. 2 for \ce{NaCl}
 
-  $\displaystyle\text{\% dissociation} = \frac{i - 1}{i_{\text{max}} - 1} \times 100\%$
+  $\displaystyle\boxed{\text{\% dissociation} = \frac{i - 1}{i_{\text{max}} - 1} \times 100\%}$
 
   \columnbreak
 
@@ -355,7 +367,7 @@
 
   \begin{itemize}
     \item multiply reaction by constant $\rightarrow$ raise $K$ to the power of that constant
-    \item $K_{\text{reverse}} = \frac{1}{K_{\text{forward}}}$
+    \item $\displaystyle K_{\text{reverse}} = \frac{1}{K_{\text{forward}}}$
     \item add reactions: \textbf{multiply} equilibrium constants
   \end{itemize}
 
@@ -402,7 +414,7 @@
     \item exothermic ($\Delta H < 0$): $T \uparrow$, K decreases, shifts to reactants, and vice versa;
   \end{itemize}
 
-  determine K at a certain temperature (two point form) $\rightarrow$ \textbf{van't hoff equation} (see formula sheet)
+  determine K at a certain temperature (two point form) $\rightarrow$ \textbf{van't hoff equation} (see formula sheet, use $R=8.314$ J/(mol$\cdot$K))
 
   \begin{framed}
     adding solids, liquids or inert gases does NOT affect equilibrium, \textbf{unless it causes a change of concentration, P, T or V}
@@ -417,7 +429,7 @@
   
   \section{electrochemistry}
 
-  \subsection{oxidation states \& redox reactions}
+  \subsection{oxidation states \& redox rxns}
 
   \textbf{rules for assigning OS:}
   \begin{itemize}
@@ -426,10 +438,9 @@
     \item sum of OS in neutral species = 0
     \item sum of OS in polyatomic ion = charge
     \item H is generally +1, O is generally -2
-    \item others \textit{USUALLY} just go check group number
+    \item others: \textit{USUALLY} just check group \#
+    \item \textbf{exceptions:} H is -1 in hydrides (e.g., \ce{LiH}); O is -1 in peroxides (e.g., \ce{H2O2})
   \end{itemize}
-
-  \textbf{exceptions:} H is -1 in hydrides (e.g., \ce{LiH}); O is -1 in peroxides (e.g., \ce{H2O2})
 
   \textbf{redox reactions:}
   \begin{itemize}
@@ -462,32 +473,32 @@
 
   \textbf{cathode (reduction):} higher potential, electrons flow to cathode
 
-  \textbf{current \& faraday's law:}
-  $$n = \frac{Q}{F} = \frac{It}{F}$$
+  \textbf{current \& faraday's law:} $\displaystyle n = \frac{Q}{F} = \frac{It}{F}$
 
-  where $F = 96,485$ C/mol (charge of 1 mole of electrons), $n$ = moles of electrons
+  where $F = 96485$ C/mol (charge of 1 mole of electrons), $n$ = moles of electrons
 
   \textbf{current efficiency:}
-  $\displaystyle \eta = \frac{\text{charge used}}{\text{charge supplied}} \times 100\% = \frac{\text{actual mass}}{\text{theoretical mass}} \times 100\%$
+
+  $\displaystyle \eta = \frac{\text{charge used}}{\text{charge supplied}} = \frac{\text{act. mass}}{\text{theor. mass}} \times 100\%$
 
   \subsection{standard cell potential}
 
-  \textbf{standard conditions:} 1.0 M for dissolved species, 1 bar for gases, 25$^\circ$C
+  \textbf{std. conditions:} 1.0 M (aqueous), 1 bar (gases), 25$^\circ$C
 
-  $$E^\circ_{\text{cell}} = E^\circ_{\text{cathode}} - E^\circ_{\text{anode}}> 0$$
+  $$E^\circ_{\text{cell}} = E^\circ_{\text{redu.}} - E^\circ_{\text{oxid.}} = E^\circ_{\text{cathode}} - E^\circ_{\text{anode}}$$
 
-  \textbf{spontaneous direction:} electrons travel from low to high potential. higher $E^\circ$ gets reduced (cathode). $E^\circ_{\text{cell}} > 0$ for spontaneous
+  \textbf{spontaneous direction:} electrons travel from low to high potential. higher $E^\circ$ gets reduced (cathode). \textbf{$E^\circ_{\text{cell}} > 0$ for spontaneous}
 
   \textbf{non-standard conditions $\rightarrow$ nernst equation} (see formula sheet)
 
   \begin{framed}
-    in the nernst equation use $n=$ \# of electrons transferred, $R = 8.314$ L$\cdot$J/(mol$\cdot$K)
+    use $n=$ \# electrons transferred, $R = 8.314\;J/(\text{mol}\cdot \text{K})$
   \end{framed}
 
   \textbf{nernst @ 25$^\circ$C:}
   $\displaystyle E_{\text{cell}} = E^\circ_{\text{cell}} - \frac{0.0592}{n}\log Q$
 
-  \textbf{concentration cell:} same material at anode and cathode. \textbf{higher concentration} acts as \textbf{cathode}, $E_{\text{cell}} = 0$
+  \textbf{concentration cell:} same material at anode and cathode. \textbf{higher concentration} acts as \textbf{cathode}, $E^\circ_{\text{cell}} = 0$
 
   \subsubsection{general 3 first steps for galvanic cell problems}
 
@@ -497,13 +508,19 @@
     \item calculate $E_{\text{cell}}$
   \end{enumerate}
 
+  \subsubsection{find best oxidizing/reducing agent}
+
+  \textbf{best oxid. agent:} choose \textbf{highest} $E^\circ$
+
+  \textbf{best redu. agent:} choose \textbf{lowest} $E^\circ$
+
   \subsubsection{nernst at equilibrium}
 
   battery dies when:
 
   \begin{itemize}
     \item equilibrium is reached ($E_{\text{cell}} = 0$, $Q = K$)
-    $\displaystyle 0 = E^\circ_{\text{cell}} - \frac{RT}{nF}\ln K\implies\boxed{\displaystyle K = \exp\left(\frac{E^\circ_{\text{cell}}nF}{RT}\right)}$
+    $\displaystyle \boxed{\displaystyle K = \exp\left(\frac{E^\circ_{\text{cell}}nF}{RT}\right)}$
     
     if $K>e^{10}$ or $K<e^{-10}$, the rxn approx. fully goes in the right/left direction
     \item the LR runs out (not in equilibrium)
