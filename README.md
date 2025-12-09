@@ -1,3 +1,3 @@
 # che102 cheat sheet
 
-ricky tang
+units 3-6 (with a bit of units 1-2)
